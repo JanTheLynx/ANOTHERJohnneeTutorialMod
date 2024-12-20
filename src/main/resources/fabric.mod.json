@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "tutorialmod",
+	"description": "I JUST WANT TO GET IT RIGHT!!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"johnnee.tutorialmod.Tutorialmod"
+		],
+		"fabric-datagen": [
+			"johnnee.tutorialmod.TutorialmodDataGenerator"
+		],
+		"client": [
+			"johnnee.tutorialmod.TutorialmodClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json",
+		{
+			"config": "tutorialmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
