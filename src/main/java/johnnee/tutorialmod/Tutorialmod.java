@@ -1,5 +1,6 @@
 package johnnee.tutorialmod;
 
+import johnnee.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,5 +12,6 @@ public class Tutorialmod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
 	}
 }
